@@ -253,7 +253,7 @@ if __name__ == '__main__':
 #class methods
 #same class Item
     def say_color(self):
-        print(f"I'm a {self.color} item!")
+        print(f("I'm a {self.color} item!"))
 
 if __name__ =='__main__':
     my_item = Item()
@@ -441,3 +441,36 @@ queue = deque
 #deques as stacks 
 #LIFO
 queue = deque(["red", "green"])
+# error handling
+#called exceptions
+#stack trace - lists line of source code that were exectued to get to the point where the error was generated, starting with the most recent line
+#try/except statements
+valid = False
+while not valid:
+    try:
+        x= int(input("Please enter a number:"))
+        print(f"{x=}")
+        valid = True
+    except ValueError:
+        print("That is not a valid number.")
+#raising exceptions
+def capitalize_fruit(fruit):
+    if not isinstance(fruit, str)
+        raise TypeError(f'fruit should be a string')
+    if fruit not in ['apple', 'banana', 'orange']:
+        raise TypeError(f'{fruit} is not a valid fruit')
+    return fruit.upper()
+#testing in python
+#unit testing - teset fixtures, test cases, test suites
+import unittest
+
+class TestStringMethods(unittest.TestCase):
+
+    def test_upper(self):
+        self.assertEqual('foo'.upper(), 'FOO')
+    def test_isupper(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('foo'.i)
+
+#python -m unitests filename.py - how to run test in command line
+#py test pip install - U pytest - create a new file

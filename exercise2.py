@@ -26,6 +26,10 @@ if __name__ == "__main__":
 
 #Exercise 3
 #Create a car class with the atributes model and color
+class Car:
+    def __init__(self, model, color):
+        self.model = model
+        self.color = color
 
 #Exercise 4
 #Complete the code to instantiate an object of the Car class, and output its model and color.
@@ -35,9 +39,31 @@ class Car:
         self.color = color
     
     def print_info(self):
-        print("Model:" + blank)
-        print("Color": + blank)
+        print("Model: " + self.model)
+        print("Color: " + self.color)
 
 if __name__ == "__main__":
-    my_car = 
-    my_car.
+    my_car = Car("BMW", "Red")
+    my_car.print_info()
+
+#Exercise 5
+#Write a python program to create a dictionary containing exam results, where the keys are students names, and the values are lists of their results (as numbers).
+#Then iterate over the exam results dictionary and output the highest score of each student. 
+exam_results = {
+    "Anna": [67, 56],
+    "Ben": [85, 78],
+    "Chris": [50, 65],
+    "Delilah": [79, 87],
+    "Ellie": [90, 85],
+    "Felix": [45, 56]
+}
+maximum = max(exam_results, key=exam_results.get)
+print(maximum, exam_results[maximum])
+
+#Exercise 6 
+# Using the results dictionary from the previous exercise, write a dict comprehension that produces a dictionary mapping student names to their average scores. 
+exam_results = ["Anna", "Ben", "Chris", "Delilah", "Ellie", "Felix"]
+for k,v in exam_results.iteritems():
+    col_average = { exam_results.append(sum(v)/float(len(v))) in exam_results}
+
+print(col_average)
