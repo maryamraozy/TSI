@@ -39,6 +39,7 @@ def main():
 #def object():
  #   object_width = input('Please input bookshelf width:>')
   #  object_height = input('Please input bookshelf height:>')
+# paintable_area = surface_area - window1_area - window2_area - door_area
 
     for wall in walls:
         totalSurfaceArea += wall.area #add the surface area of all the walls
