@@ -427,4 +427,17 @@ col_lengths = {col: len(col) for col in colors}
 print(col_lengths)
 #output: {'Red':3, 'Green':5, 'Blue':4}
 
-#
+#Deques
+from collections import deque
+my_deque = deque(["red", "green", "blue"])
+
+
+
+#deque operations
+#deques as queues
+from collections import deque
+queue = deque
+
+#deques as stacks 
+#LIFO
+queue = deque(["red", "green"])
