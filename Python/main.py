@@ -474,3 +474,87 @@ class TestStringMethods(unittest.TestCase):
 
 #python -m unitests filename.py - how to run test in command line
 #py test pip install - U pytest - create a new file
+#file handling 
+file = open("filename.txt")
+#open a file for reading and writing
+f1 = open("filename.txt", "r+")
+
+#open a file for (over)writing
+#file will be created if it doesnt exist
+f2 + open("new_file.txt", "w+")
+
+#binary mode
+
+#file encodings
+#an optional keyword argument encoding, can be used to specify an encoding for the file being opened. 
+#file = open("file.txt", "w", encoding = "utf-8")
+
+#closing files
+file = open("file.txt")
+print(file.read())
+file.close()_
+#alternatvely, use a with statement to manage the context and automatically close once read
+with open("file.txt") as file:
+    print(file.read())
+
+file.read()
+
+#reading text files
+read([size]) - #read a number of characters ffrom the file eqqual to the optional sizepararameter
+readline()
+readlines()
+
+#iterating lines
+with open("file.txt") as file:
+    while line:= file.readline():
+        print(line)
+
+#writin to text files
+with open("hello.txt", "w") as file:
+    file.write("hello, World!\n")
+with open("hello.txt", "a") as file:
+    file.write("hola, Mundo!\n")
+    
+#directories
+os.mkdir(path) - #create
+os.rmdir(path) - #delete
+os.listdir(path) - #list all the FileExis
+os.path.exists(path) - #check is given path points to valid file
+os.path.isfile(path) - #check isthe given path points to a file
+os.path.isdir(path) - #check is given path points to a directory
+
+
+#working with directories
+import os
+dir_path = "test"
+#get the list of files in the directory
+for file_name is os.listdir(dir_path)
+
+    file_path = os.path.join(fir_path, file_name)
+
+    if os.path.isfile(file_path):
+        print(f"{file_path} is a file")
+
+    else:
+        print(f"{file_path} is a directory")
+#reading and writing JSON
+#load 
+import json
+with open("data.json", "r") as file:
+    data = json.load(file)
+    print(data)
+#dump
+import json
+data = {
+    "foo": "bar"
+    "baz": 42
+}
+with open("data.json", "r") as file:
+json.dump(data,fie)
+#CSV - File format for storing data
+#provides two functions, reader and writer 
+import csv
+
+with open("data.csv", "w", newline-'') as file:
+    writer = csv.writer(file)
+    writer.writerow(['foo', 42])
