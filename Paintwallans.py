@@ -19,31 +19,30 @@ def main():
 
         walls.append(wall) #add a wall to list
 
-#How many coats of paint the user would like 
-    coats = int(input('Enter number of coats needed: '))
+
+    coats = int(input('Enter number of coats needed: ')) #How many coats of paint the user would like 
 
 
-#def removeObstructions():
- #   obstructions = str('Are there any obstructions? Please enter yes or no')
-  #  if obstructions == yes()
-    
+    obstructions = input('Are there any obstructions? Please enter yes or no') #check if there any obstructions
+    if obstructions == 'yes': 
+        objectSurfaceAreas = [] #List to store all the obstruction surface areas 
+        completed = False
+        while completed == False: #If user says yes, will enter a loop asking for height and width until user says no
+            object_width = float(input('Please input object width:>'))
+            object_height = float(input('Please input object height:>'))
+            object_area = object_height*object_width
+            objectSurfaceAreas.append(object_area)
+        
+            obstructions = input('Are there any obstructions? Please enter yes or no ')
+            if obstructions == 'no': #once user says no more obstruction, then it will exit loop
+                completed = True             
 
-#def door():
- #   door_width = input('Please input door width :>')
-  #  door_height = input('Please input door height :>')
-
-#def window():
- #   window1_width = input('Please input 1st window width :>')
-  #  window1_height = input('Please input 1st window height :>')
-
-#def object():
- #   object_width = input('Please input bookshelf width:>')
-  #  object_height = input('Please input bookshelf height:>')
-# paintable_area = surface_area - window1_area - window2_area - door_area
 
     for wall in walls:
         totalSurfaceArea += wall.area #add the surface area of all the walls
-         
+    
+    totalSurfaceArea -= sum(objectSurfaceAreas) #minus the obstruction surface area from the total surface area
+
     paint_gallons = round(coats*totalSurfaceArea/12)
     print(" # of litres of paint needed = " + str(paint_gallons)) #prints the number of litres needed for the total surface area the user has inputted.
 
@@ -51,3 +50,17 @@ def main():
     print("It will cost £ " + str(paint_gallons*costPaint)) #prints the total cost against one paint comapany currently - dulux
 
 main()
+
+#add optoins for paint - cheaper paint - match statement
+x = 3
+match x:
+    case 1:
+        print("1")
+    case 2:
+        print("2")
+    case 3 | 4 | 5:
+        print("3 or 4 or 5")
+    case _:
+        print("other number")
+#how many cans you need and how much would that cost.
+#user validation/error handling
