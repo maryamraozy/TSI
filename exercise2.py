@@ -57,13 +57,18 @@ exam_results = {
     "Ellie": [90, 85],
     "Felix": [45, 56]
 }
-maximum = max(exam_results, key=exam_results.get)
-print(maximum, exam_results[maximum])
+for student in exam_results.keys():
+    studentResults = exam_results[student]
+    maximum = max(studentResults)
+    print(student, maximum)
 
 #Exercise 6 
 # Using the results dictionary from the previous exercise, write a dict comprehension that produces a dictionary mapping student names to their average scores. 
-exam_results = ["Anna", "Ben", "Chris", "Delilah", "Ellie", "Felix"]
-for k,v in exam_results.iteritems():
-    col_average = { exam_results.append(sum(v)/float(len(v))) in exam_results}
+student_names = ["Anna", "Ben", "Chris", "Delilah", "Ellie", "Felix"]
+studentAverages = {}
+for student in exam_results.keys():
+    studentResults = exam_results[student]
+    studentsExamAverage = sum(studentResults)/len(studentResults)
+    studentAverages[student] = studentsExamAverage
 
-print(col_average)
+print(studentAverages)
