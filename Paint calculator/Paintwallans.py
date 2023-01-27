@@ -1,6 +1,6 @@
 #Creating a class for Wall
 class Wall: 
-    def __init__(self, height:float, length:float):
+    def __init__(self, height:float, length:float): 
         self.height = height
         self.length = length
         self.area = height*length
@@ -87,6 +87,3 @@ def main():
     print("It will cost £ " + str(paint_gallons*costPaint)) #prints the total cost against one paint comapany currently - dulux
 
 main()
-    
-#how many cans you need and how much would that cost.
-#user validation/error handling
