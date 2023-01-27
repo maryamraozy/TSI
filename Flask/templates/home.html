@@ -12,21 +12,45 @@
 </header>
 
 <body>
-       	<!--start of nav-->
     <nav>
         <div class = "logo">
-            <p> Find an event near you</p>
+            <p> Weather Report</p>
         </div>
     	<ul>
     		<li> <a href="home.html">Home</a></li>
-    		<li> <a href="ticket.html">Tickets</a></li>
+    		<li> <a href="ticket.html">Weather Report</a></li>
             <li> <a href="#">Login</a></li>
             <li> <a href="#">Signup</a></li>
     	</ul>
     </nav>
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-12 col-xs-12 pt-5">
+            <form method="POST" class="card border-0 p-3 shadow-sm">
+                <div class="form-group">
+                <input type="text" class="form-control" name="city" placeholder="Enter a city for weather">
+                </div>
 
-    <div class = "second"> <!--This is the first sentence.--></div>
+                <div class="form-group">
+                <input type="text" class="form-control" name="country" placeholder="Enter a country for weather">
+                </div>
+    <br>
 
-</body>
-
+                <div class="form-group">
+                <button class="btn">Get Weather</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    </body>
+{% endblock content %}
 </html>
